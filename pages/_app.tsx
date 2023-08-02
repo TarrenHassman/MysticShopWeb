@@ -3,12 +3,14 @@ import { ChainId, ThirdwebProvider, coinbaseWallet, metamaskWallet, paperWallet,
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import { ethers } from "ethers";
+import { log } from "console";
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "goerli"
 const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
 function MyApp({ Component, pageProps }: AppProps) {
+  log(clientId)
   return (
     <ThirdwebProvider
       supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
