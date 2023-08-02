@@ -1,8 +1,9 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css"
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Image from "next/image";
 export default function Navbar() {
+  const address = useAddress();
   return (
     <div>
       <Image 
@@ -11,8 +12,12 @@ export default function Navbar() {
       width={100}
       height={100}
       className={styles.logo}>
-
       </Image>
+      {address && (
+        <Link href={'/profile/${address}'}>
+          <p>My NFTS</p>
+        </Link>
+      )}
       <div className={styles.walletConnect}>
             <ConnectWallet
               theme="dark"

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { NextPage } from "next";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Navbar from "../components/navbar";
+import ClaimCard from "../components/claimCard";
 
 const Home: NextPage = () => {
   return (
@@ -49,16 +50,7 @@ const Home: NextPage = () => {
       width={500}
       height={500}
       />
-            <Image className={styles.key}
-      style={{
-        float:"left",
-        transform:"translate(0px, 50vh)",
-      }}
-      width={500}
-      height={500}
-      src="/images/AetherKey.png"
-      alt="Placeholder preview of starter"
-      />
+        <ClaimCard/>
         <p>
           Information about my new game
         </p>

@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
       activeChain={activeChain}
     >
-      <Navbar></Navbar>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
