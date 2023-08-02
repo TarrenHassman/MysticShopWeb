@@ -24,7 +24,6 @@ export default function ClaimCard() {
     isLoading: isTotalClaimedLoading,
   } = useTotalCirculatingSupply(contract);
   const maxClaimable = parseInt(activeClaimPhase?.maxClaimablePerWallet || "0")
-
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -47,14 +46,18 @@ export default function ClaimCard() {
               </div>
             ):(
               <div>
-                <p>uyoaihsdiufyhakwe</p>
+                <p>Loading...</p>
               </div>
             )}
-            {!isTotalClaimedLoading && (
+            {!isTotalClaimedLoading ? (
                 <div>
                   <p>
                     Claimed: {totalClaimed?.toNumber()}
                   </p>
+                </div>
+              ):(
+                <div>
+                  <p>Loading...</p>
                 </div>
               )
             }
