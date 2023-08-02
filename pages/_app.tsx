@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
       supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
-      clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
+      clientId={"d701b43f9b5960e8126324e5e030dbf6"}
       activeChain={activeChain}
     >
       <Component {...pageProps} />
