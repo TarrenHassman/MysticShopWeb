@@ -47,7 +47,7 @@ export default function ClaimCard() {
               ){
                 <p>Loading...</p>
               }
-              {!isTotalClaimedLoading && !isTotalSupplyLoading ? (
+              {/* {!isTotalClaimedLoading && !isTotalSupplyLoading ? (
                 <div>
                   <p>Claimed: {totalClaimed?.toNumber()}</p>
                   <p>Supply: {totalSupply?.toNumber()}</p>
@@ -64,7 +64,7 @@ export default function ClaimCard() {
                     (contract) => contract.erc1155.claim(0,1)
                   }>
                     ClaimNft
-                  </Web3Button>
+                  </Web3Button> */}
                 </div>
               ) : (
                 <div>
