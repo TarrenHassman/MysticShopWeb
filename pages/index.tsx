@@ -80,11 +80,28 @@ const Home: NextPage = () => {
               backgroundSize: '100% 100%'
             }}
       >
-        
+      </ParallaxLayer>
+      <ParallaxLayer
+      speed={3}
+      factor={1}
+      offset={2.4}
+      >
+              <Image className={styles.frontZ}
+      style={{
+        float:"right",
+        transform: "translate(0px, 50vh)"
+      }}
+      src="/images/Cloud.png"
+      alt="Placeholder preview of starter"
+      width={800}
+      height={600}
+      />
       </ParallaxLayer>
     </Parallax>
   );
 };
+
+// "Bit Coin" (https://skfb.ly/6QUTG) by Márcio N. is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 
 export default Home;
