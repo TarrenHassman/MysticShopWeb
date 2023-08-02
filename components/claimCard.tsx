@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css"
-import {ConnectWallet, MediaRenderer, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useContract, useContractMetadata, useTotalCirculatingSupply, useTotalCount } from "@thirdweb-dev/react";
+import {ConnectWallet, ContractMetadata, MediaRenderer, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useContract, useContractMetadata, useTotalCirculatingSupply, useTotalCount } from "@thirdweb-dev/react";
 import {CONTRACT_ADDRESS} from '../consts/addresses';
 export default function ClaimCard() {
   const address = useAddress();
@@ -33,6 +33,10 @@ export default function ClaimCard() {
               <MediaRenderer
               src={contractMetadata?.image}
               ></MediaRenderer>
+            </div>
+            <div>
+              <h1>{contractMetadata?.name}</h1>
+              <p>{contractMetadata?.description}</p>
             </div>
           </div>
         )}
