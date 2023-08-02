@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^9.7.3",
-    "@thirdweb-dev/react": "^3",
-    "@thirdweb-dev/sdk": "^3",
+    "@thirdweb-dev/react": "^3.14.23",
+    "@thirdweb-dev/sdk": "^3.10.42",
     "ethers": "^5",
     "next": "^13",
     "react": "^18.2",

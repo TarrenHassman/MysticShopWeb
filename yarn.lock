@@ -1607,24 +1607,24 @@
   resolved "https://registry.npmjs.org/@thirdweb-dev/generated-abis/-/generated-abis-0.0.1.tgz"
   integrity sha512-vO9/3lSLO8smyyH1QVeYravSTzFwV1nf1C/Im1NBDPdH8//YvcbhtETGGiNfHWpyCvSi0vRYwvf+/7FKdwpDGQ==
 
-"@thirdweb-dev/react-core@3.14.22":
-  version "3.14.22"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/react-core/-/react-core-3.14.22.tgz"
-  integrity sha512-CxWy3hZPL1gjdXzuEkSg2yaqGYCaIvfahNGlDR6iDl/61eXv86NApQKfvnjfFRKlTwnKSuMNQezuj2losIRPrA==
+"@thirdweb-dev/react-core@3.14.23":
+  version "3.14.23"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/react-core/-/react-core-3.14.23.tgz#976408f0e0bc6c5f97017a7e2ab1b783f290f4bd"
+  integrity sha512-Qy9VQ2GQBxVYADn/SoclOZHGYPZNuXVtih0eYLo7hGa9vttwwiImlDI+irT0h4IG4EXAL2nNTNguW1Q8v0lyfQ==
   dependencies:
     "@tanstack/react-query" "^4.32.0"
     "@thirdweb-dev/chains" "0.1.40"
     "@thirdweb-dev/generated-abis" "^0.0.1"
     "@thirdweb-dev/sdk" "3.10.42"
     "@thirdweb-dev/storage" "1.2.2"
-    "@thirdweb-dev/wallets" "1.1.5"
+    "@thirdweb-dev/wallets" "1.1.6"
     mime "3.0.0"
     tiny-invariant "^1.2.0"
 
-"@thirdweb-dev/react@^3":
-  version "3.14.22"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/react/-/react-3.14.22.tgz"
-  integrity sha512-FWMfGbzjV2lkJtfXnZmanJS7aVo6XAXyrKbDIwwF48skJhSaOM5U+hZV6HYOYOv3MhD1P+5VSoMky/yPurJ5nw==
+"@thirdweb-dev/react@^3.14.23":
+  version "3.14.23"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/react/-/react-3.14.23.tgz#88e466429b4824f8ca0ca04b3d042f2f225bc23f"
+  integrity sha512-yUhEEaOdxPHpG+IJ3kcofwKuYfJOvik3G1LR9fXscArx+FDxSw2AijkJ7KuTQDha4hQuU43ABAtlbE/Kalxu9Q==
   dependencies:
     "@emotion/react" "^11.11.1"
     "@emotion/styled" "^11.11.0"
@@ -1639,8 +1639,8 @@
     "@react-icons/all-files" "^4.1.0"
     "@tanstack/react-query" "^4.32.0"
     "@thirdweb-dev/chains" "0.1.40"
-    "@thirdweb-dev/react-core" "3.14.22"
-    "@thirdweb-dev/wallets" "1.1.5"
+    "@thirdweb-dev/react-core" "3.14.23"
+    "@thirdweb-dev/wallets" "1.1.6"
     buffer "^6.0.3"
     copy-to-clipboard "^3.3.2"
     detect-browser "^5.3.0"
@@ -1648,7 +1648,7 @@
     react-qr-code "^2.0.11"
     tiny-invariant "^1.2.0"
 
-"@thirdweb-dev/sdk@3.10.42", "@thirdweb-dev/sdk@^3":
+"@thirdweb-dev/sdk@3.10.42", "@thirdweb-dev/sdk@^3.10.42":
   version "3.10.42"
   resolved "https://registry.npmjs.org/@thirdweb-dev/sdk/-/sdk-3.10.42.tgz"
   integrity sha512-OxE3jnQpCnq94tvtC7o2ox/PCdj7vX/yvKg7kAjsAoE495X2Sp7940eIqoEq2Bpe/q1tcSdup/vpaIBKsDWiMA==
@@ -1681,10 +1681,10 @@
     form-data "^4.0.0"
     uuid "^9.0.0"
 
-"@thirdweb-dev/wallets@1.1.5":
-  version "1.1.5"
-  resolved "https://registry.npmjs.org/@thirdweb-dev/wallets/-/wallets-1.1.5.tgz"
-  integrity sha512-2SnIxAKh72bBXx6aS5Ad2vIcZu/szC/3kJjMpdyMMrqdw/jc96e2cGGF3m8NQqg/STB6YNl405wP4yIDHWTGyA==
+"@thirdweb-dev/wallets@1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@thirdweb-dev/wallets/-/wallets-1.1.6.tgz#04c39bdf363f7348d43f665f29965c8d67762ccf"
+  integrity sha512-ruofB5P0Ir2/zd57Z5DfM6PKw7T8jS1r2iImuaQwcE5h60cieVVpfIddaAB9Lq7cNAuBVsGqk1c3ZRFHQk4uQw==
   dependencies:
     "@account-abstraction/contracts" "^0.5.0"
     "@account-abstraction/sdk" "^0.5.0"
