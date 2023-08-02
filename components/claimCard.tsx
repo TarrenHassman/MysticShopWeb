@@ -27,7 +27,7 @@ export default function ClaimCard() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
+      <div className={styles.main}>
         {!isContractMetadataLoading && (
           <div className={styles.heroSection}>
             <div className={styles.collectionImage}>
