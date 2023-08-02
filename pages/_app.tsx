@@ -13,7 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
       supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
       clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
-      signer={new ethers.providers.Web3Provider(window.ethereum).getSigner()}
       activeChain={activeChain}
     >
       <Component {...pageProps} />
