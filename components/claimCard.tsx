@@ -14,7 +14,7 @@ export default function ClaimCard() {
   const {
     data: activeClaimPhase,
     isLoading: isActiveClaimPhaseLoading,
-  } = useActiveClaimConditionForWallet(contract, address);
+  } = useActiveClaimCondition(contract);
   const {
     data: totalSupply,
     isLoading: isTotalSupplyLoading,
