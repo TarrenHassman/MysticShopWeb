@@ -76,7 +76,7 @@
 }
 
 .card {
-  background-color: #131313;
+  background-color: #4a0b6cac;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -100,6 +100,10 @@
   border: none;
 }
 
+.card h1 {
+  float: right;
+}
+
 .card:hover,
 .card:focus,
 .card:active {
@@ -112,6 +116,7 @@
 }
 
 .card p {
+  float: right;
   margin: 0;
   font-size: 1rem;
   line-height: 1.75;

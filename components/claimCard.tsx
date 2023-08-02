@@ -27,7 +27,7 @@ export default function ClaimCard() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.main}>
+      <div className={styles.card}>
         {!isContractMetadataLoading && (
           <div className={styles.heroSection}>
             <div className={styles.collectionImage}>
@@ -36,9 +36,16 @@ export default function ClaimCard() {
               ></MediaRenderer>
             </div>
             <div>
-              <p>{contractMetadata?.name}</p>
+              <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
             </div>
+            {isActiveClaimPhaseLoading ? (
+              <div><p>Loading...</p></div>
+            ):(
+              <div>
+                <p>Claim Phase: {activeClaimPhase?.metadata?.name}</p>
+              </div>
+            )}
           </div>
         )}
       </div>
