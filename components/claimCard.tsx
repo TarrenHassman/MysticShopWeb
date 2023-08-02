@@ -35,10 +35,10 @@ export default function ClaimCard() {
                 src={contractMetadata?.image}
               ></MediaRenderer>
             </div>
-            <p>Test</p>
+            {/* <p>Test</p>
         <h1>ClaimPhase: {isActiveClaimPhaseLoading}</h1>
         <h1>Claimed: {isTotalClaimedLoading}</h1>
-        <p>Test</p>
+        <p>Test</p> */}
             <div>
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
