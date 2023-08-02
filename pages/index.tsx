@@ -51,9 +51,6 @@ const Home: NextPage = () => {
       height={500}
       />
         <ClaimCard/>
-        <p>
-          Information about my new game
-        </p>
         <p
         style={{
           float:"right",

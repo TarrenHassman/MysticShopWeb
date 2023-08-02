@@ -42,8 +42,10 @@ export default function ClaimCard() {
             {!isActiveClaimPhaseLoading && (
               <div>
                 <p>Claim Phase: {activeClaimPhase?.metadata?.name}</p>
+                <p>Price: {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
               </div>
             )}
+            
           </div>
         )}
       </div>
