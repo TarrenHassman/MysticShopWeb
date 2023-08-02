@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css"
 import {ConnectWallet, ContractMetadata, MediaRenderer, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useContract, useContractMetadata, useTotalCirculatingSupply, useTotalCount } from "@thirdweb-dev/react";
 import {CONTRACT_ADDRESS} from '../consts/addresses';
+import { ethers } from "ethers";
 export default function ClaimCard() {
   const address = useAddress();
   const{
@@ -33,10 +34,31 @@ export default function ClaimCard() {
               <MediaRenderer
               src={contractMetadata?.image}
               ></MediaRenderer>
+              {contractMetadata?.image == undefined} ? <p>Loading...</p> : ()
             </div>
             <div>
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
+              {!isActiveClaimPhaseLoading}?(
+                <div>
+                  <p>Claim Phase : {activeClaimPhase?.metadata?.name}</p>
+                  <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
+                </div>
+              ){
+                <p>Loading...</p>
+              }
+              {!isTotalClaimedLoading && !isTotalSupplyLoading ? (
+                <div>
+                  <p>Claimed: {totalClaimed?.toNumber()}</p>
+                <p>Supply: {totalSupply?.toNumber()}</p>
+                </div>
+              )
+              : (
+                <div>
+                  Loading...
+                </div>
+              )
+              }
             </div>
           </div>
         )}
