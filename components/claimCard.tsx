@@ -42,7 +42,7 @@ export default function ClaimCard() {
               {!isActiveClaimPhaseLoading}?(
               <div>
                 <p>Claim Phase : {activeClaimPhase?.metadata?.name}</p>
-                <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
+                <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price! || "0")}</p>
               </div>
               ){
                 <p>Loading...</p>
