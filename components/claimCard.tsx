@@ -28,11 +28,6 @@ export default function ClaimCard() {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
-        <p>Test</p>
-        <h1>{process.env.NEXT_PUBLIC_CLIENT_ID}</h1>
-        <h1>ClaimPhase: {isActiveClaimPhaseLoading}</h1>
-        <h1>Claimed: {isTotalClaimedLoading}</h1>
-        <p>Test</p>
         {!isContractMetadataLoading && (
           <div className={styles.heroSection}>
             <div className={styles.collectionImage}>
@@ -40,6 +35,11 @@ export default function ClaimCard() {
                 src={contractMetadata?.image}
               ></MediaRenderer>
             </div>
+            <p>Test</p>
+        <h1>{process.env.NEXT_PUBLIC_CLIENT_ID}</h1>
+        <h1>ClaimPhase: {isActiveClaimPhaseLoading}</h1>
+        <h1>Claimed: {isTotalClaimedLoading}</h1>
+        <p>Test</p>
             <div>
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
