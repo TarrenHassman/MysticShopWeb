@@ -1,38 +1,38 @@
 import styles from "../styles/Home.module.css"
-import {ConnectWallet, ContractMetadata, MediaRenderer, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useContract, useContractMetadata, useTotalCirculatingSupply, useTotalCount } from "@thirdweb-dev/react";
-import {CONTRACT_ADDRESS} from '../consts/addresses';
+import { ConnectWallet, ContractMetadata, MediaRenderer, SmartContract, Web3Button, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useContract, useContractMetadata, useTotalCirculatingSupply, useTotalCount } from "@thirdweb-dev/react";
+import { CONTRACT_ADDRESS } from '../consts/addresses';
 import { ethers } from "ethers";
 export default function ClaimCard() {
   const address = useAddress();
-  const{
+  const {
     contract
   } = useContract(CONTRACT_ADDRESS);
-  const{
+  const {
     data: contractMetadata,
     isLoading: isContractMetadataLoading,
   } = useContractMetadata(contract);
-  const{
+  const {
     data: activeClaimPhase,
     isLoading: isActiveClaimPhaseLoading,
   } = useActiveClaimConditionForWallet(contract, address);
-  const{
+  const {
     data: totalSupply,
-    isLoading : isTotalSupplyLoading,
+    isLoading: isTotalSupplyLoading,
   } = useTotalCount(contract);
-  const{
+  const {
     data: totalClaimed,
-    isLoading : isTotalClaimedLoading,
+    isLoading: isTotalClaimedLoading,
   } = useTotalCirculatingSupply(contract);
   const maxClaimable = parseInt(activeClaimPhase?.maxClaimablePerWallet || "0")
 
-  return(
+  return (
     <div className={styles.container}>
       <div className={styles.main}>
-        {!isContractMetadataLoading &&(
+        {!isContractMetadataLoading && (
           <div className={styles.heroSection}>
             <div className={styles.collectionImage}>
               <MediaRenderer
-              src={contractMetadata?.image}
+                src={contractMetadata?.image}
               ></MediaRenderer>
               {contractMetadata?.image == undefined} ? <p>Loading...</p> : ()
             </div>
@@ -40,25 +40,37 @@ export default function ClaimCard() {
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
               {!isActiveClaimPhaseLoading}?(
-                <div>
-                  <p>Claim Phase : {activeClaimPhase?.metadata?.name}</p>
-                  <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
-                </div>
+              <div>
+                <p>Claim Phase : {activeClaimPhase?.metadata?.name}</p>
+                <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
+              </div>
               ){
                 <p>Loading...</p>
               }
               {!isTotalClaimedLoading && !isTotalSupplyLoading ? (
                 <div>
                   <p>Claimed: {totalClaimed?.toNumber()}</p>
-                <p>Supply: {totalSupply?.toNumber()}</p>
+                  <p>Supply: {totalSupply?.toNumber()}</p>
                 </div>
               )
-              : (
+                : (
+                  <div>
+                    Loading...
+                  </div>
+                )}
+              {address ? (
                 <div>
-                  Loading...
+                  <Web3Button contractAddress={CONTRACT_ADDRESS} action={
+                    (contract) => contract.erc1155.claim(0,1)
+                  }>
+                    ClaimNft
+                  </Web3Button>
                 </div>
-              )
-              }
+              ) : (
+                <div>
+                  <p>Connect your wallet to buy</p>
+                </div>
+              )}
             </div>
           </div>
         )}
