@@ -36,6 +36,7 @@ export default function ClaimCard() {
               ></MediaRenderer>
             </div>
             <div>
+              <h1>{process.env.NEXT_PUBLIC_CLIENT_ID}</h1>
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
             </div>
