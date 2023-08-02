@@ -154,3 +154,7 @@
 .backZ{
   z-index: -999;
 }
+
+.key{
+  transform: scale(.5);
+}

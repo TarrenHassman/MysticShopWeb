@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div>
       <Image 
-      src="/images/Logo1.png"
+      src="/images/AetherLogo.png"
       alt="Placeholder preview of starter"
       width={100}
       height={100}

@@ -14,16 +14,6 @@ const Home: NextPage = () => {
         end: 10
       }}
       >
-      <Image className={styles.frontZ}
-      style={{
-        float:"right",
-        transform:"translate(-3vw, 85vh)"
-      }}
-      src="/images/Key.png"
-      alt="Placeholder preview of starter"
-      width={100}
-      height={100}
-      />
       <Navbar></Navbar>
       </ParallaxLayer>
       <ParallaxLayer
@@ -46,13 +36,29 @@ const Home: NextPage = () => {
       </ParallaxLayer>
       <ParallaxLayer
       speed={1}
-      factor={.3}
+      factor={.5}
       offset={2}
-            style={{
-              backgroundImage: "url('/images/Aether1.png')",
-              backgroundSize: '50% 100%'
-            }}
       >
+      <Image className={styles.frontZ}
+      style={{
+        float:"right",
+        transform: "translate(0px, 50vh)"
+      }}
+      src="/images/EtheralShop.png"
+      alt="Placeholder preview of starter"
+      width={500}
+      height={500}
+      />
+            <Image className={styles.key}
+      style={{
+        float:"left",
+        transform:"translate(0px, 50vh)",
+      }}
+      width={500}
+      height={500}
+      src="/images/AetherKey.png"
+      alt="Placeholder preview of starter"
+      />
         <p>
           Information about my new game
         </p>
