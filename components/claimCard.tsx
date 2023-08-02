@@ -35,42 +35,6 @@ export default function ClaimCard() {
                 src={contractMetadata?.image}
               ></MediaRenderer>
             </div>
-            <div>
-              <h1>{contractMetadata?.name}</h1>
-              <p>{contractMetadata?.description}</p>
-              {!isActiveClaimPhaseLoading ? (
-              <div>
-                <p>Claim Phase : {activeClaimPhase?.metadata?.name}</p>
-                <p>Price : {ethers.utils.formatUnits(activeClaimPhase?.price! || "0")}</p>
-              </div>
-              ):(
-                <p>Loading...</p>
-              )}
-              {!isTotalClaimedLoading && !isTotalSupplyLoading ? (
-                <div>
-                  <p>Claimed: {totalClaimed?.toNumber()}</p>
-                  <p>Supply: {totalSupply?.toNumber()}</p>
-                </div>
-              )
-                : (
-                  <div>
-                    Loading...
-                  </div>
-                )}
-              {address ? (
-                <div>
-                  <Web3Button contractAddress={CONTRACT_ADDRESS} action={
-                    (contract) => contract.erc1155.claim(0,1)
-                  }>
-                    ClaimNft
-                  </Web3Button>
-                </div>
-              ) : (
-                <div>
-                  <p>Connect your wallet to buy</p>
-                </div>
-              )}
-            </div>
           </div>
         )}
       </div>
