@@ -39,10 +39,15 @@ export default function ClaimCard() {
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
             </div>
-            {!isActiveClaimPhaseLoading && (
+            {!isActiveClaimPhaseLoading ? (
               <div>
+                <p>jkaasdf</p>
                 <p>Claim Phase: {activeClaimPhase?.metadata?.name}</p>
                 <p>Price: {ethers.utils.formatUnits(activeClaimPhase?.price!)}</p>
+              </div>
+            ):(
+              <div>
+                <p>uyoaihsdiufyhakwe</p>
               </div>
             )}
             {!isTotalClaimedLoading && (
