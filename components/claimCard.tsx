@@ -35,11 +35,6 @@ export default function ClaimCard() {
                 src={contractMetadata?.image}
               ></MediaRenderer>
             </div>
-            <div>
-              <h1>{contractMetadata?.name}</h1>
-              <p>{contractMetadata?.description}</p>
-            </div>
-            
           </div>
         )}
       </div>
