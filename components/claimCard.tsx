@@ -39,9 +39,7 @@ export default function ClaimCard() {
               <h1>{contractMetadata?.name}</h1>
               <p>{contractMetadata?.description}</p>
             </div>
-            {isActiveClaimPhaseLoading ? (
-              <div><p>Loading...</p></div>
-            ):(
+            {!isActiveClaimPhaseLoading && (
               <div>
                 <p>Claim Phase: {activeClaimPhase?.metadata?.name}</p>
               </div>
