@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ChainId, ThirdwebProvider, ThirdwebSDKProvider, coinbaseWallet, metamaskWallet, paperWallet, safeWallet, walletConnect } from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider, coinbaseWallet, metamaskWallet, paperWallet, safeWallet, walletConnect } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
 import { ethers } from "ethers";
@@ -7,16 +7,15 @@ import { ethers } from "ethers";
 // Change this to the chain your app is built for.
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 const activeChain = "goerli"
-const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebSDKProvider
-      // supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
-      clientId={clientId}
+    <ThirdwebProvider
+      supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
+      clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
       activeChain={activeChain}
     >
       <Component {...pageProps} />
-    </ThirdwebSDKProvider>
+    </ThirdwebProvider>
   );
 }
 
