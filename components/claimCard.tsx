@@ -36,7 +36,6 @@ export default function ClaimCard() {
               ></MediaRenderer>
             </div>
             <p>Test</p>
-        <h1>{process.env.NEXT_PUBLIC_CLIENT_ID}</h1>
         <h1>ClaimPhase: {isActiveClaimPhaseLoading}</h1>
         <h1>Claimed: {isTotalClaimedLoading}</h1>
         <p>Test</p>

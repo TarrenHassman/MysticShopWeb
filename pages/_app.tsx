@@ -15,7 +15,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       clientId={clientId}
       activeChain={activeChain}
     >
-      <p>{process.env.NEXT_PUBLIC_CLIENT_ID}</p>
       <Component {...pageProps} />
     </ThirdwebProvider>
   );
