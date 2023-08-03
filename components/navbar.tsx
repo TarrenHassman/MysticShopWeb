@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css"
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { ConnectWallet, useAddress, useConnectedWallet, useSDK, useWallet } from "@thirdweb-dev/react";
 import Image from "next/image";
 export default function Navbar() {
   const address = useAddress();

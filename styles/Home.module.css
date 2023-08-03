@@ -144,19 +144,17 @@
 }
 
 .heroSection {
-  background-color: #1b2129;
+  background-color: #270e3eb7;
   color: #fff;
-  padding: 2rem 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 20px;
 }
 .collectionImage {
+  padding: 1em;
   border-radius: 20px;
-  overflow: hidden;
-  margin-right: 2rem;
+  backdrop-filter: blur(10px);
+  overflow: visible;
 }
 
 .card,
@@ -170,20 +168,4 @@
 
 .walletConnect{
   float:right
-}
-
-.frontZ{
-  z-index: 999;
-}
-
-.centerZ{
-  z-index: 0;
-}
-
-.backZ{
-  z-index: -999;
-}
-
-.key{
-  transform: scale(.5);
 }
