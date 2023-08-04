@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import ClaimCard from "../components/claimCard";
+import { useParallax } from "react-scroll-parallax";
+import ShopArt from "../components/shopArt";
 export default function ParallaxInfo(
 ) {
   return (
@@ -39,16 +41,7 @@ export default function ParallaxInfo(
           factor={.5}
           offset={2}
         >
-          <Image
-            style={{
-              float: "right",
-              transform: "translate(0px, 50vh)"
-            }}
-            src="/images/EtheralShop.png"
-            alt="Placeholder preview of starter"
-            width={500}
-            height={500}
-          />
+<ShopArt/>
           <ClaimCard />
           <p
             style={{
