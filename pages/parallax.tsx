@@ -43,7 +43,6 @@ export default function ParallaxInfo(
           offset={2}
         >
 <ShopArt/>
-          <ClaimCard />
         </ParallaxLayer>
         <ParallaxLayer
           speed={.2}
@@ -54,6 +53,13 @@ export default function ParallaxInfo(
             backgroundSize: '100% 100%'
           }}
         >
+        </ParallaxLayer>
+        <ParallaxLayer
+        speed={1}
+        factor={.5}
+        offset={3}
+        >
+        <ClaimCard />
         </ParallaxLayer>
         <ParallaxLayer
           speed={3}
