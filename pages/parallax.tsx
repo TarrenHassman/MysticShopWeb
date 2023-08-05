@@ -25,6 +25,7 @@ export default function ParallaxInfo(
             backgroundSize: '100% 100%'
           }}
         >
+
         </ParallaxLayer>
         <ParallaxLayer
           speed={.5}
@@ -43,14 +44,6 @@ export default function ParallaxInfo(
         >
 <ShopArt/>
           <ClaimCard />
-          <p
-            style={{
-              float: "right",
-              transform: "translate(0px, 50vh)"
-            }}
-          >
-            Information about my new game
-          </p>
         </ParallaxLayer>
         <ParallaxLayer
           speed={.2}
