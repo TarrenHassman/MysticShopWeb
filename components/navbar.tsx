@@ -13,11 +13,6 @@ export default function Navbar() {
       height={100}
       className={styles.logo}>
       </Image>
-      {address && (
-        <Link href={'/profile/${address}'}>
-          <p>My NFTS</p>
-        </Link>
-      )}
       <div className={styles.walletConnect}>
             <ConnectWallet
               theme="dark"

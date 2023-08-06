@@ -43,6 +43,15 @@ export default function ClaimCard() {
                   <p>
                     Remaining: {activeClaimPhase?.availableSupply}/ {activeClaimPhase?.maxClaimableSupply}
                   </p>
+                  <Web3Button
+              contractAddress={CONTRACT_ADDRESS}
+              action={(contract)=>{
+                console.log("clicked")
+                contract.erc1155.claim(0,1)
+              }}
+            >
+              Claim Key
+            </Web3Button>
                 </div>
               ):(
                 <div>

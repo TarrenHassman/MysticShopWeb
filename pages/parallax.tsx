@@ -7,19 +7,23 @@ import { useParallax } from "react-scroll-parallax";
 import ShopArt from "../components/shopArt";
 export default function ParallaxInfo(
 ) {
+  //Scale based on quadratic function between screen sizes
   return (
     <div>
-      <Parallax pages={10}>
+      <Parallax pages={4}>
         <ParallaxLayer
-          sticky={{
-            start: 0,
-            end: 10
-          }}
+        style={{
+          maxHeight:60,
+        }}
+        sticky={{
+start:0,
+end:4
+        }}
         >
           <Navbar></Navbar>
         </ParallaxLayer>
         <ParallaxLayer
-          factor={10}
+          factor={4}
           style={{
             backgroundImage: "url('/images/background.jpg')",
             backgroundSize: '100% 100%'
@@ -36,6 +40,19 @@ export default function ParallaxInfo(
             backgroundSize: '100% 100%'
           }}
         >
+        </ParallaxLayer>
+        <ParallaxLayer
+          speed={1}
+          factor={.25}
+        >
+          <Image
+          src={"/images/M.png"}
+          style={{
+        }}
+        height={500}
+        width={200}
+        alt=""
+          />
         </ParallaxLayer>
         <ParallaxLayer
           speed={1}
@@ -59,7 +76,6 @@ export default function ParallaxInfo(
         factor={.5}
         offset={3}
         >
-        <ClaimCard />
         </ParallaxLayer>
         <ParallaxLayer
           speed={3}
@@ -76,6 +92,11 @@ export default function ParallaxInfo(
             width={800}
             height={600}
           />
+        </ParallaxLayer>
+        <ParallaxLayer
+        offset={3}
+        >
+                  <ClaimCard />
         </ParallaxLayer>
       </Parallax>
     </div>
