@@ -3,7 +3,7 @@ import { ConnectWallet, ContractMetadata, MediaRenderer, Web3Button, useActiveCl
 import { CONTRACT_ADDRESS } from '../consts/addresses';
 import { ethers } from "ethers";
 import { useEffect } from "react";
-export default function ClaimCard() {
+export default function MainClaim() {
   const address = useAddress();
   const {
     contract
@@ -41,7 +41,7 @@ export default function ClaimCard() {
                 {!isTotalClaimedLoading ? (
                 <div>
                   <p>
-                    Remaining: {activeClaimPhase?.availableSupply}/ {activeClaimPhase?.maxClaimableSupply}
+                    Remaining: {parseInt(activeClaimPhase?.availableSupply || "0")-7}/ 100
                   </p>
                   <Web3Button
               contractAddress={CONTRACT_ADDRESS}
