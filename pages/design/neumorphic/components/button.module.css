@@ -1,0 +1,14 @@
+#btnControl {
+  display: none;
+}
+
+.btn {
+  border-radius: 45px;
+  background: #af2cc9;
+  box-shadow:  5px 5px 10px #832197,
+               -5px -5px 10px #db37fb;
+}
+
+#btnControl:checked + label > img {
+  
+}

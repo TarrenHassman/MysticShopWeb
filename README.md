@@ -1,40 +1,46 @@
-## Getting Started
+Avatar System
+  Smart Wallet Implementation which
+    Generates a burnable soulbound nft called Registry, which is a list of NFTs & their locations in relation to the origin point of the base model (First in Registry) used in the avatar
+    OnTransfer -> Checks NFT against Registry, if in Registry, generate new Registry without NFT, burn old Registry
+    List of NFTs & their positions to form the avatar (These meshes should be merged on load)
 
-Create a project using this example:
 
-```bash
-npx thirdweb create --template next-typescript-starter
-```
+Functions as a relational tree.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Avoids placing restrictions on the NFTs stored or linked
+  Though a potential standard is discussed below
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our [hooks](https://portal.thirdweb.com/react) and
-[UI Components](https://portal.thirdweb.com/ui-components) to work.
+  Allows Devs to implement their system as they see fit. 
 
-## Environment Variables
+  2d vs 3d Implementations
 
-To run this project, you will need to add environment variables. Check the `.env.example` file for all the environment variables required and add it to `.env.local` file or set them up on your hosting provider.
+  Example of Mesh Merging for performance
+  Blender Extension
 
-## Deploy to IPFS
 
-Deploy a copy of your application to IPFS using the following command:
+  ERC-6337 & ERC-4337 - Token Bound Account & Smart Wallet
+    Allows creation of a wallet controlled by the owner of the connected NFT
+    Used for Player Accounts
 
-```bash
-yarn deploy
-```
+  *Research Needed: ERC-5606  Multiverse Token
+    Need to understand its potential use in minting to multiple chains
+    Example: Soulbound tokens for different chains in the token bound account of the overarching model
 
-## Learn More
+  *Ownership cycles:
+    Ownership cycles are prevented on the UI level. You can not move an NFT from the Token bound slot into it's inventory
+    if a user wishes to go around these by editing the code, then they will not be prevented as is.
 
-To learn more about thirdweb and Next.js, take a look at the following resources:
 
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Templates](https://thirdweb.com/templates)
+  Alternative Smart Wallet Implementations -  ERC-7504: Dynamic Contracts
+  https://thirdweb.com/thirdweb.eth/DynamicAccountFactory
+    Used for opt-in upgrades to the Smart Wallet (ie: Automated option for vault staking when NFT recieved)
 
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
+  *Will likely use a Dynamic Account Factory in the production version to allow for adding additional features to the wallet over time
 
-## Join our Discord!
+  https://thirdweb.com/thirdweb.eth/ManagedAccountFactory
+    Used for forced upgrades to the Smart Wallet (ie: Limit to specific NFT ecosystem)
 
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+
+
+  ERC-5484 - Consensual Soulbound Token
+    Can be used for non-transferable items / skills / experience

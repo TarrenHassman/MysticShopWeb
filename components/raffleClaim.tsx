@@ -1,13 +1,13 @@
 import styles from "../styles/Home.module.css"
 import { ConnectWallet, ContractMetadata, MediaRenderer, Web3Button, useActiveClaimCondition, useActiveClaimConditionForWallet, useAddress, useConnectedWallet, useContract, useContractMetadata, useNFTs, useOwnedNFTs, useTotalCirculatingSupply, useTotalCount, useUnclaimedNFTSupply } from "@thirdweb-dev/react";
-import { CONTRACT_ADDRESS } from '../consts/addresses';
+import {contractAddress  } from '../../mysticmarket/const/yourDetails';
 import { ethers } from "ethers";
 import { useEffect } from "react";
 export default function FutureClaimCard() {
   const address = useAddress();
   const {
     contract
-  } = useContract(CONTRACT_ADDRESS);
+  } = useContract(contractAddress);
   const {
     data: contractMetadata,
     isLoading: isContractMetadataLoading,
@@ -42,7 +42,7 @@ export default function FutureClaimCard() {
                   ?????
                   </p>
                   <Web3Button
-              contractAddress={CONTRACT_ADDRESS}
+              contractAddress={contractAddress}
               action={(contract)=>{
                 console.log("clicked")
                 contract.erc1155.claim(0,1)

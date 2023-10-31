@@ -1,0 +1,35 @@
+
+
+.neuContainer {
+position: absolute;
+width: 30vw;
+height: 100vh;
+overflow-y: clip;
+overflow-x: visible;
+background: #454694;
+left: 0;
+z-index: 1;
+}
+
+.nameLogo{
+  scale: .5;
+  margin-top: -150px;
+  z-index: 0;
+}
+
+.glassContainer{
+  z-index: -50;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url('../public/skybox.jpg') no-repeat center center fixed; 
+        -webkit-background-size: 100%;
+        -moz-background-size:100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        /* background-position: right; */
+}
+
+.avatarContainer{
+  z-index: 2000;
+}

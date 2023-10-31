@@ -1,0 +1,41 @@
+.roadmapCard {
+  height: 70px;
+  border-radius: 1rem;
+  width: 30vw;
+  overflow: hidden;
+  transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: #4e0188;
+  margin-top: 15px;
+  text-align: start;
+}
+
+.gradientText4 {
+  background: #966c39;
+  background: -webkit-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  background: -moz-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  background: radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(3px 3px 8px #4B365F) drop-shadow(2px 2px 5px #84309c);
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.slide{
+  display: none;
+}
+.roadmapCard:hover {
+  height: 200px;
+  width: 70vw;
+}
+.roadmapTitle {
+  color: transparent;
+  margin-top: -20px;
+  margin-left: 1rem;
+}
+.roadmapDescription {
+  color: transparent;
+}
+
+.icon{
+
+}

@@ -1,18 +1,64 @@
 import type { AppProps } from "next/app";
-import { ChainId, ThirdwebProvider, coinbaseWallet, metamaskWallet, paperWallet, safeWallet, walletConnect } from "@thirdweb-dev/react";
-import "../styles/globals.css";
-import Navbar from "../components/navbar";
-import { ethers } from "ethers";
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "goerli"
+import { ThirdwebProvider, coinbaseWallet, magicLink, metamaskWallet, paperWallet, safeWallet, smartWallet, walletConnect } from "@thirdweb-dev/react";
+import '../styles/globals.css';
+import './design/neumorphic/undented.module.css'
+import '../styles/GlassProfile.module.css'
+import { DynamicAccountFactory } from "../consts/addresses";
+
+const activeChain = "mumbai";
+const walletConnectInstance = walletConnect();
+const metamaskWalletInstance = metamaskWallet();
+const coinbaseWalletInstance = coinbaseWallet();
+const paperWalletInstance = paperWallet();
+const magicWalletInstance = magicLink(
+  {
+    apiKey: "",
+    oauthOptions: {
+      providers: [
+        "google",
+        "facebook",
+        "twitter",
+        "apple",
+      ],
+    },
+  }
+);
+export const walletConnectConfig = smartWallet(walletConnectInstance, {
+  factoryAddress: DynamicAccountFactory,
+  gasless: true,
+});
+export const metamaskWalletConfig = smartWallet(metamaskWalletInstance, {
+  factoryAddress: DynamicAccountFactory,
+  gasless: true,
+});
+export const coinbaseWalletConfig = smartWallet(coinbaseWalletInstance, {
+  factoryAddress: DynamicAccountFactory,
+  gasless: true,
+});
+// export const paperWalletConfig = smartWallet(paperWalletInstance, {
+//   factoryAddress: DynamicAccountFactory,
+//   gasless: true,
+// });
+export const magicWalletConfig = smartWallet(magicWalletInstance, {
+  factoryAddress: DynamicAccountFactory,
+  gasless: true,
+});
+
+
+
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
-      supportedWallets={[metamaskWallet(), coinbaseWallet(), walletConnect(),safeWallet()]}
-      clientId={process.env.NEXT_PUBLIC_CLIENT_ID}
+      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
       activeChain={activeChain}
+      supportedWallets={[
+        walletConnectConfig,
+        metamaskWalletConfig,
+        coinbaseWalletConfig,
+        // paperWalletConfig,
+        magicWalletConfig
+      ]}
     >
       <Component {...pageProps} />
     </ThirdwebProvider>

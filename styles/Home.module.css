@@ -13,6 +13,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.gradientText4{
+  background: #966c39;
+  background: -webkit-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  background: -moz-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  background: radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(3px 3px 8px #4B365F) drop-shadow(2px 2px 5px #84309c);
+  /* -webkit-text-fill-color: transparent; */
+}
+
 .gradientText0 {
   background: -webkit-linear-gradient(#bfa3da, #84309c, #c735b0);
   -webkit-background-clip: text;
@@ -152,8 +164,7 @@
 }
 .collectionImage {
   padding: 1em;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  border-radius: 10px;
   overflow: visible;
 }
 
@@ -167,5 +178,53 @@
 }
 
 .walletConnect{
-  float:right
+  position: absolute;
+  transform: translateX(-50%);
+  top: 100px;
+  left: 50%;
+  transition: .5s;
+}
+
+
+.profile{
+  float: right;
+  height: 120px;
+  max-width: 350px;
+  width: 35vw;
+  position: relative;
+  box-sizing: border-box;
+  transition: .5s;
+  background: #4a0b6cac;
+  border-radius: 20px;
+}
+
+/* .profile:hover{
+  height: 230px;
+}
+
+.profile:hover .walletConnect{
+  transform: translateY(100px);
+} */
+
+.profileImg{
+  position: absolute;
+  transform: translateX(-50%);
+  top: -50px;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  background: #222;
+  border-radius: 20px;
+}
+
+.alpha{
+  background: #222;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 55px;
+}
+
+.test{
+  height: 20px;
 }
