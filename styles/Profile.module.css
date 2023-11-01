@@ -1,3 +1,13 @@
+@media screen and (max-width: 690px) {
+  .container {
+    visibility: hidden;
+    clear: both;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
 .container{
   height: 250px;
   width: 250px;
@@ -7,7 +17,7 @@
   transition: all 0.5s ease;
   background: #4e0088;
   top: 10px;
-  left: 10px;
+  float: right;
   box-shadow:  5px 5px 10px #33015a,
   -5px -5px 10px #6901b6;
 }

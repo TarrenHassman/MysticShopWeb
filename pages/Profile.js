@@ -14,9 +14,7 @@ function Profile() {
   //TODO: Avatar img to 3d model viewer
   return <div className={styles.undented +" "+ styles.container}>
     <div className={styles.wrapper}>
-      <a href="a">
         <img alt="Avatar" src="favicon.ico" className={styles.avatar}/>
-      </a>
       <div
       className={app.nameLogo}
             style={{
@@ -70,7 +68,7 @@ function Profile() {
         <div className={styles.icons}>
           <li>
           <button >
-    <img  src="discord.png"></img>
+            <a href="https://discord.gg/ejSXm3Da">    <img  src="discord.png"></img></a>
               </button>
               </li>
               <li >

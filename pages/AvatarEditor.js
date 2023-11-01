@@ -176,7 +176,11 @@ function AvatarEditor() {
             >
             <img src="avatar.svg" ></img>
           </button>
-          <button className={styles.createWorld}>
+          <button className={styles.createWorld}
+              onClick={() => {
+                console.log("create account")
+                createWallet();
+              }}>
             <img src="world.svg" ></img>
           </button>
           {/* Wallet of the Token Bound Account */}

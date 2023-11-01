@@ -4,8 +4,8 @@
   box-shadow:  5px 5px 10px #33015a,
   -5px -5px 10px #6901b6;
   padding: .5rem;
-  width: min(95vw, 40rem);
-  height: min(95vh, 70rem);
+  width: min(95vw, 20rem);
+  height: 100vh;
   display: grid;
   /* gap: 1rem; */
   grid-template-columns: repeat(5, 1fr);
@@ -153,8 +153,8 @@
   width: 130px;
   height: 130px;
   pointer-events: none;
-
 }
+
 .avatarLayer {
   background: #4e0188;
   border-radius: 15px;

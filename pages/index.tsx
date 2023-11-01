@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     </div>
     </div> */}
     <div className={styles.glassContainer} >
-    {/* <Profile /> */}
+    <Profile />
       <AvatarEditor />
     </div>
     <GlassProfile />
