@@ -1,0 +1,62 @@
+[debug] [2023-11-01T03:52:09.241Z] ----------------------------------------------------------------------
+[debug] [2023-11-01T03:52:09.242Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-11-01T03:52:09.242Z] CLI Version:   11.18.0
+[debug] [2023-11-01T03:52:09.242Z] Platform:      darwin
+[debug] [2023-11-01T03:52:09.242Z] Node Version:  v18.17.0
+[debug] [2023-11-01T03:52:09.246Z] Time:          Tue Oct 31 2023 20:52:09 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-11-01T03:52:09.246Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-01T03:52:09.276Z] Object ".hosting" in "firebase.json" has unknown property: {"additionalProperty":"frameworksBackend"}
+[debug] [2023-11-01T03:52:09.276Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2023-11-01T03:52:09.276Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-11-01T03:52:09.278Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-01T03:52:09.278Z] > authorizing via signed-in user (tarren.m.hassman@gmail.com)
+[debug] [2023-11-01T03:52:09.278Z] [iam] checking project marketplace-365311 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-01T03:52:09.279Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions [none]
+[debug] [2023-11-01T03:52:09.279Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions x-goog-quota-user=projects/marketplace-365311
+[debug] [2023-11-01T03:52:09.279Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-01T03:52:09.772Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions 200
+[debug] [2023-11-01T03:52:09.773Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-01T03:52:09.774Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 [none]
+[debug] [2023-11-01T03:52:10.464Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 200
+[debug] [2023-11-01T03:52:10.464Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 {"projectId":"marketplace-365311","projectNumber":"749506924014","displayName":"Marketplace","name":"projects/marketplace-365311","resources":{"hostingSite":"marketplace-365311","realtimeDatabaseInstance":"marketplace-365311-default-rtdb"},"state":"ACTIVE","etag":"1_3a60101e-685e-4cbf-85e8-40f1c29cf91c"}
+[debug] [2023-11-01T03:52:11.985Z] defaultcredentials: writing to file /Users/tarrenhassman/.config/firebase/tarren_m.hassman_gmail.com_application_default_credentials.json
+[debug] [2023-11-01T03:52:45.578Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/Users/tarrenhassman/Documents/Projects/MysticMarketPortal/react/mysticmarket1/node_modules/next/dist/server/config.js:621:41)
+    at getConfig (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:276:28)
+    at build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:58:31)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:243:93)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-01T03:53:21.504Z] ----------------------------------------------------------------------
+[debug] [2023-11-01T03:53:21.505Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-11-01T03:53:21.506Z] CLI Version:   11.18.0
+[debug] [2023-11-01T03:53:21.506Z] Platform:      darwin
+[debug] [2023-11-01T03:53:21.506Z] Node Version:  v18.17.0
+[debug] [2023-11-01T03:53:21.510Z] Time:          Tue Oct 31 2023 20:53:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-11-01T03:53:21.510Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-01T03:53:21.541Z] Object ".hosting" in "firebase.json" has unknown property: {"additionalProperty":"frameworksBackend"}
+[debug] [2023-11-01T03:53:21.541Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2023-11-01T03:53:21.541Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-11-01T03:53:21.543Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-01T03:53:21.543Z] > authorizing via signed-in user (tarren.m.hassman@gmail.com)
+[debug] [2023-11-01T03:53:21.543Z] [iam] checking project marketplace-365311 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-01T03:53:21.544Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions [none]
+[debug] [2023-11-01T03:53:21.544Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions x-goog-quota-user=projects/marketplace-365311
+[debug] [2023-11-01T03:53:21.544Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-01T03:53:21.935Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions 200
+[debug] [2023-11-01T03:53:21.936Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/marketplace-365311:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-01T03:53:21.937Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 [none]
+[debug] [2023-11-01T03:53:22.246Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 200
+[debug] [2023-11-01T03:53:22.247Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/marketplace-365311 {"projectId":"marketplace-365311","projectNumber":"749506924014","displayName":"Marketplace","name":"projects/marketplace-365311","resources":{"hostingSite":"marketplace-365311","realtimeDatabaseInstance":"marketplace-365311-default-rtdb"},"state":"ACTIVE","etag":"1_3a60101e-685e-4cbf-85e8-40f1c29cf91c"}
+[debug] [2023-11-01T03:53:23.659Z] defaultcredentials: writing to file /Users/tarrenhassman/.config/firebase/tarren_m.hassman_gmail.com_application_default_credentials.json
+[debug] [2023-11-01T03:53:47.131Z] TypeError: Cannot destructure property 'customConfig' of '(intermediate value)(intermediate value)(intermediate value)' as it is null.
+    at loadConfig (/Users/tarrenhassman/Documents/Projects/MysticMarketPortal/react/mysticmarket1/node_modules/next/dist/server/config.js:621:41)
+    at getConfig (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:276:28)
+    at build (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/next/index.js:58:31)
+    at async prepareFrameworks (/usr/local/lib/node_modules/firebase-tools/lib/frameworks/index.js:243:93)
+    at async deploy (/usr/local/lib/node_modules/firebase-tools/lib/deploy/index.js:53:13)
+[error] 
+[error] Error: An unexpected error has occurred.

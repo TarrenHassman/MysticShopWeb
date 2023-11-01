@@ -65,5 +65,7 @@ contract Barter {
         //transfer of all nfts from accepter to escrow wallet
         //if neither revert
         //transfer all nfts from escrow wallet to associated address
+        //if either reverts (not all NFTs transferred) then cancel trade and
+        // return NFTs to appropriate parties
     }
 }

@@ -4,7 +4,7 @@
   box-shadow:  5px 5px 10px #33015a,
   -5px -5px 10px #6901b6;
   padding: .5rem;
-  width: min(95vw, 70rem);
+  width: min(95vw, 40rem);
   height: min(95vh, 70rem);
   display: grid;
   /* gap: 1rem; */

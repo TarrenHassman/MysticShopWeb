@@ -5,26 +5,25 @@
 import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
-// import "erc6551/lib/ERC6551AccountLib.sol";
-// import "./abstract/Lockable.sol";
-// import "./abstract/Overridable.sol";
-// import "./abstract/Permissioned.sol";
-// import "./abstract/ERC6551Account.sol";
-// import "./abstract/ERC4337Account.sol";
-// import "./abstract/execution/TokenboundExecutor.sol";
-// import "./lib/OPAddressAliasHelper.sol";
-// import "./interfaces/IAccountGuardian.sol";
+import "./lib/ERC6551AccountLib.sol";
+import "./abstract/Lockable.sol";
+import "./abstract/Overridable.sol";
+import "./abstract/Permissioned.sol";
+import "./abstract/ERC6551Account.sol";
+import "./abstract/ERC4337Account.sol";
+import "./abstract/execution/TokenboundExecutor.sol";
+import "./lib/OPAddressAliasHelper.sol";
+import "./interfaces/IAccountGuardian.sol";
 
 contract CompositeEntity is
     ERC721Holder,
-    ERC1155Holder
-    // ,
-    // Lockable,
-    // Overridable,
-    // Permissioned,
-    // ERC6551Account,
-    // ERC4337Account,
-    // TokenboundExecutor
+    ERC1155Holder,
+    Lockable,
+    Overridable,
+    Permissioned,
+    ERC6551Account,
+    ERC4337Account,
+    TokenboundExecutor
 {
 
   // Avatar
@@ -67,8 +66,11 @@ contract CompositeEntity is
         accessories[_wallet] = accessory;
     }
 
-  function containsEquipment(address _NFT) public view returns (bool){
+  function containsAccessory(address _NFT) public view returns (bool){
         return !(accessories[_NFT].isInit == false);
+    }
+  function removeAccesory(address _NFT) public{
+        // return !(accessories[_NFT].isInit == false);
     }
 
     function _beforeExecute() internal 
@@ -76,14 +78,15 @@ contract CompositeEntity is
      {
       // get the token being transferred for now call.value is used to represent that value
       
-      // if(containsEquipment(call.value)){
-      //   //RemoveEquipment();
-      // }
-      // if(avatar == call.value){
-      //   //emit event for notification about replacing avatar before executing
-        //revert AvatarLocked();
-      // }
-        // if (isLocked()) revert AccountLocked();
-      //   _updateState();
+      if(containsAccessory(call.value)){
+        removeAccessory();
+        //Complete transaction
+      }
+      if(avatar == call.value){
+        //emit event for notification about replacing avatar before executing
+        revert AvatarLocked();
+      }
+        if (isLocked()) revert AccountLocked();
+        _updateState();
     }
 }
